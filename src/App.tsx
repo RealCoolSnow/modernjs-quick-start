@@ -1,20 +1,15 @@
-import { Switch, Route } from '@modern-js/runtime/router';
-
+import React, { useState } from 'react';
+import intl from 'react-intl-universal';
+import { loadLocales } from './locale';
 import '@/styles/main.css';
 
-const App = () => (
-  <Switch>
-    <Route exact={true} path="/">
-      <div className="container">
-        <main>
-          <p className="text-primary">Hello world!</p>
-        </main>
-      </div>
-    </Route>
-    <Route path="*">
-      <div>404</div>
-    </Route>
-  </Switch>
-);
+const App = () => {
+  const [localeLoaded, setLocaleLoaded] = useState(false);
+  // eslint-disable-next-line promise/prefer-await-to-then
+  loadLocales().then(() => {
+    setLocaleLoaded(true);
+  });
+  return localeLoaded && <div>{intl.get('hello')}</div>;
+};
 
 export default App;
