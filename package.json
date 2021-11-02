@@ -7,7 +7,8 @@
     "build": "modern build",
     "start": "modern start",
     "new": "modern new",
-    "lint": "modern lint"
+    "lint": "modern lint",
+    "dev:esm": "modern dev --unbundled"
   },
   "engines": {
     "node": ">=14.17.6"
@@ -41,7 +42,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "@modern-js/plugin-less": "1.0.0",
-    "@modern-js/plugin-sass": "1.0.0"
+    "@modern-js/plugin-sass": "1.0.0",
+    "tailwindcss": "2.2.19"
   },
   "devDependencies": {
     "@modern-js/app-tools": "^1.0.0",
@@ -49,7 +51,9 @@
     "typescript": "^4",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "@types/node": "^14"
+    "@types/node": "^14",
+    "@modern-js/plugin-tailwindcss": "^1.0.0",
+    "@modern-js/plugin-unbundle": "^1.0.0"
   },
   "modernConfig": {
     "runtime": {
