@@ -7,7 +7,7 @@ const App = () => (
     <Route exact={true} path="/">
       <div className="container">
         <main>
-          <p className="text-red-500">Hello world!</p>
+          <p className="text-primary">Hello world!</p>
         </main>
       </div>
     </Route>

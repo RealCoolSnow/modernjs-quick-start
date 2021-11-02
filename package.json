@@ -59,6 +59,26 @@
     "runtime": {
       "router": true,
       "state": true
+    },
+    "source": {
+      "designSystem": {
+        "extend": {
+          "colors": {
+            "primary": "#1296db"
+          }
+        }
+      }
+    },
+    "tools": {
+      "tailwindcss": {
+        "variants": {
+          "extend": {
+            "backgroundColor": [
+              "active"
+            ]
+          }
+        }
+      }
     }
   }
 }
