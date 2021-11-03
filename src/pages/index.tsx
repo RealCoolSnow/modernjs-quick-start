@@ -7,7 +7,6 @@ import Header from '@/components/Header';
 
 const Index = () => {
   const [count, setCount] = useState(0);
-  const onInc = () => setCount(count + 1);
   return (
     <div className="flex flex-col items-center">
       <Header title={intl.get('home')} />
@@ -20,7 +19,9 @@ const Index = () => {
         </Link>
       </div>
       <div className="mt-6">
-        <div className="border-2 px-1 m-2 text-red-400" onClick={onInc}>
+        <div
+          className="border-2 px-1 m-2 text-red-400"
+          onClick={() => setCount(count + 1)}>
           counter - {count}
         </div>
         <div className="border-2 px-1 m-2 text-blue-400">mock test</div>
