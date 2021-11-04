@@ -8,6 +8,7 @@ import Header from '@/components/common/Header';
 import Counter from '@/components/Counter';
 import countModel from '@/store/models/count-model';
 import LocalCounter from '@/components/LocalCounter';
+import logoImg from '@/assets/images/logo.png';
 
 const Index = () => {
   const [countState] = useModel(countModel);
@@ -28,6 +29,7 @@ const Index = () => {
         <LocalCounter />
         <div className="border-2 px-1 m-2 text-blue-400">mock test</div>
       </div>
+      <img src={logoImg} className="w-16" />
       <Footer />
     </div>
   );
