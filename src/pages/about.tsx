@@ -1,9 +1,9 @@
 import React from 'react';
 import intl from 'react-intl-universal';
 import { Link } from '@modern-js/runtime/router';
-import Header from '@/components/Header';
+import Header from '@/components/common/Header';
 import LocaleSwitch from '@/components/LocaleSwitch';
-import Footer from '@/components/Footer';
+import Footer from '@/components/common/Footer';
 import earthSvg from '@/assets/svg/earth.svg';
 
 const About = () => (

@@ -63,6 +63,10 @@
       "router": true,
       "state": true
     },
+    "output": {
+      "enableModernMode": true,
+      "polyfill": "ua"
+    },
     "source": {
       "designSystem": {
         "extend": {
