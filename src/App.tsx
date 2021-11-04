@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Route, Switch } from '@modern-js/runtime/router';
-import { loadLocales } from './locale';
+import { useModel } from '@modern-js/runtime/model';
+import { getCurrentLocale, loadLocales } from './locale';
 import { Provider } from './store';
+import appModel from './store/models/app-model';
 import routes from '@/routes';
 import '@/styles/main.css';
 
 const App = () => {
   const [localeLoaded, setLocaleLoaded] = useState(false);
+  const [, actions] = useModel(appModel);
   // eslint-disable-next-line promise/prefer-await-to-then
   loadLocales().then(() => {
     setLocaleLoaded(true);
+    actions.setLanguage(getCurrentLocale());
   });
   return (
     <Provider>
@@ -27,5 +31,7 @@ const App = () => {
     </Provider>
   );
 };
+// eslint-disable-next-line no-console
+console.log('app created');
 
 export default App;

@@ -24,6 +24,7 @@ const DEFAULT_LOCALE = 'en-US';
 let currentLocale = DEFAULT_LOCALE;
 
 const loadLocales = (): Promise<void> => {
+  // 侦测语言
   currentLocale = intl.determineLocale({
     urlLocaleKey: 'lang',
     cookieLocaleKey: 'lang',
