@@ -10,6 +10,7 @@ specifiers:
   '@types/node': ^14
   '@types/react': ^17
   '@types/react-dom': ^17
+  axios: ^0.24.0
   lodash: ^4.17.21
   react: ^17.0.1
   react-dom: ^17.0.1
@@ -19,6 +20,7 @@ specifiers:
 
 dependencies:
   '@modern-js/runtime': registry.npmmirror.com/@modern-js/runtime/1.0.0_8e3522129ef2816b3c737f17aecb3a9d
+  axios: registry.npmmirror.com/axios/0.24.0
   lodash: registry.nlark.com/lodash/4.17.21
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
@@ -11941,6 +11943,16 @@ packages:
       - debug
     dev: true
 
+  registry.npmmirror.com/axios/0.24.0:
+    resolution: {integrity: sha1-gE5voeS5xSiFAd2d/1anoJQNINY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/axios/download/axios-0.24.0.tgz}
+    name: axios
+    version: 0.24.0
+    dependencies:
+      follow-redirects: registry.npmmirror.com/follow-redirects/1.14.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   registry.npmmirror.com/babel-loader/8.2.3_webpack@5.61.0:
     resolution: {integrity: sha1-iYa0Dxpkys/LS4QpMgCF72ixNC0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/babel-loader/download/babel-loader-8.2.3.tgz?cache=0&sync_timestamp=1634812093986&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fbabel-loader%2Fdownload%2Fbabel-loader-8.2.3.tgz}
     id: registry.npmmirror.com/babel-loader/8.2.3
@@ -13529,7 +13541,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: true
 
   registry.npmmirror.com/fraction.js/4.1.1:
     resolution: {integrity: sha1-rE5SBHPa5nAS1hiquR7aCby0AP8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fraction.js/download/fraction.js-4.1.1.tgz}

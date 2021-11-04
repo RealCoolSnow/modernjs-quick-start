@@ -39,6 +39,7 @@
   ],
   "dependencies": {
     "@modern-js/runtime": "latest",
+    "axios": "^0.24.0",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -75,7 +76,10 @@
             "primary": "#1296db"
           }
         }
-      }
+      },
+      "envVars": [
+        "API_BASE_URL"
+      ]
     },
     "tools": {
       "tailwindcss": {
@@ -86,6 +90,11 @@
             ]
           }
         }
+      },
+      "devServer": {
+        "hot": true,
+        "https": false,
+        "liveReload": false
       }
     }
   }

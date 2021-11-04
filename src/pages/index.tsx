@@ -9,9 +9,15 @@ import Counter from '@/components/Counter';
 import countModel from '@/store/models/count-model';
 import LocalCounter from '@/components/LocalCounter';
 import logoImg from '@/assets/images/logo.png';
+import { helloGet } from '@/api/hello';
 
 const Index = () => {
   const [countState] = useModel(countModel);
+  const onHttpTest = async () => {
+    const res = await helloGet();
+    // eslint-disable-next-line no-console
+    console.log('helloGet', res);
+  };
   return (
     <div className="flex flex-col items-center">
       <Header title={intl.get('home')} />
@@ -27,7 +33,9 @@ const Index = () => {
         <div className="m-2 text-red-500">{countState.value}</div>
         <Counter />
         <LocalCounter />
-        <div className="border-2 px-1 m-2 text-blue-400">mock test</div>
+        <div className="border-2 px-1 m-2 text-blue-400" onClick={onHttpTest}>
+          http test
+        </div>
       </div>
       <img src={logoImg} className="w-16" />
       <Footer />
