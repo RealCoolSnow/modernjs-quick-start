@@ -94,7 +94,13 @@
       "devServer": {
         "hot": true,
         "https": false,
-        "liveReload": false
+        "liveReload": false,
+        "proxy": {
+          "/api/": {
+            "target": "http://dev.yourserver",
+            "changeOrigin": true
+          }
+        }
       }
     }
   }
