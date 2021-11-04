@@ -38,9 +38,9 @@
     "dist/"
   ],
   "dependencies": {
-    "@modern-js/plugin-less": "1.0.0",
-    "@modern-js/plugin-sass": "1.0.0",
-    "@modern-js/runtime": "^1.0.0",
+    "@modern-js/plugin-less": "latest",
+    "@modern-js/plugin-sass": "latest",
+    "@modern-js/runtime": "latest",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -48,10 +48,10 @@
     "tailwindcss": "2.2.19"
   },
   "devDependencies": {
-    "@modern-js/app-tools": "^1.0.0",
-    "@modern-js/plugin-jarvis": "^1.0.0",
-    "@modern-js/plugin-tailwindcss": "^1.0.0",
-    "@modern-js/plugin-unbundle": "^1.0.0",
+    "@modern-js/app-tools": "latest",
+    "@modern-js/plugin-jarvis": "latest",
+    "@modern-js/plugin-tailwindcss": "latest",
+    "@modern-js/plugin-unbundle": "latest",
     "@types/lodash": "^4.14.176",
     "@types/node": "^14",
     "@types/react": "^17",
