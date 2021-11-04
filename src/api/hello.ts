@@ -1,7 +1,7 @@
-import http from './http';
+import { get, post } from './http';
 
 export const helloGet = (params?: any, config?: any) =>
-  http.get('hello', { params, ...config });
+  get<string>('hello', { params, ...config });
 
 export const helloPost = (params?: any, config?: any) =>
-  http.post('hello', params, config);
+  post<string>('hello', params, config);
