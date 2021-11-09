@@ -63,17 +63,6 @@
     "@types/express": "^4.17.13"
   },
   "modernConfig": {
-    "server": {
-      "port": 3000
-    },
-    "runtime": {
-      "router": true,
-      "state": true
-    },
-    "output": {
-      "enableModernMode": true,
-      "polyfill": "ua"
-    },
     "source": {
       "designSystem": {
         "extend": {
@@ -85,6 +74,19 @@
       "envVars": [
         "API_BASE_URL"
       ]
+    },
+    "server": {
+      "port": 3000
+    },
+    "runtime": {
+      "router": true,
+      "state": true
+    },
+    "output": {
+      "enableModernMode": true,
+      "polyfill": "ua",
+      "favicon": "./src/assets/images/logo.png",
+      "disableSourceMap": true
     },
     "tools": {
       "tailwindcss": {
