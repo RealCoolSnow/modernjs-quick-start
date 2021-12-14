@@ -8,7 +8,7 @@ const Counter = () => {
   const [state, actions] = useModel(countModel);
   return (
     <div
-      className="border-2 px-1 m-2 text-red-400"
+      className="bg-blue-500 text-white shadow-blue-500/50 shadow-lg btn-common"
       onClick={() => actions.add()}>
       counter - {state.value}
     </div>

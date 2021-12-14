@@ -9,7 +9,7 @@ const LocalCounter = () => {
   const [state, actions] = useLocalModel(countModel);
   return (
     <div
-      className="border-2 px-1 m-2 text-red-400"
+      className="bg-green-500 shadow-green-500/50 shadow-lg btn-common"
       onClick={() => actions.add()}>
       local counter - {state.value}
     </div>

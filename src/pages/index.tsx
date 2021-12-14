@@ -14,9 +14,14 @@ import { helloGet } from '@/api/hello';
 const Index = () => {
   const [countState] = useModel(countModel);
   const onHttpTest = async () => {
-    const res = await helloGet();
-    // eslint-disable-next-line no-console
-    console.log('helloGet', res);
+    try {
+      const res = await helloGet();
+      // eslint-disable-next-line no-console
+      console.log('helloGet', res);
+    } catch (error) {
+      // eslint-disable-next-line no-alert
+      alert(error);
+    }
   };
   return (
     <div className="flex flex-col items-center">
@@ -29,15 +34,19 @@ const Index = () => {
           <span className="text-blue-500">{intl.get('about')}</span>
         </Link>
       </div>
-      <div className="mt-6">
+      <img src={logoImg} className="w-32 mt-2" />
+
+      <div className="mt-2">
         <div className="m-2 text-red-500">{countState.value}</div>
         <Counter />
+        <div className="mt-2" />
         <LocalCounter />
-        <div className="border-2 px-1 m-2 text-blue-400" onClick={onHttpTest}>
+        <div
+          className="mt-2 bg-indigo-500 w-36 text-white shadow-lg shadow-indigo-500/50 btn-common"
+          onClick={onHttpTest}>
           http test
         </div>
       </div>
-      <img src={logoImg} className="w-16" />
       <Footer />
     </div>
   );

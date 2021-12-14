@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-common {
+    @apply w-36 py-2 text-white rounded-full;
+  }
+  .btn-common:active {
+    @apply opacity-70;
+  }
+}
