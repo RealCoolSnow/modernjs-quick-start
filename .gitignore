@@ -2,6 +2,7 @@
 
 .pnp
 .pnp.js
+.env.local
 .env.*.local
 .history
 .rts*
@@ -38,3 +39,5 @@ output_resource/
 **/*/adapters/**/index.js
 
 .changeset/pre.json
+
+.pnpm-store/
